@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movies.gr</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<header>
+  <div class="logo">
+    <img src="logo.png" alt="Logo" class="logo-img">
+    <h1>MOVIES.GR</h1>
+ 
+</header>
+
+
+<div id="search-bar" class="hidden">
+  <input type="text" id="search-input" placeholder="Αναζήτηση...">
+  <button id="search-btn">🔍</button>
+</div>
+
+
+<main id="main-content">
+  
+  
+  <section id="home-section">
+    <h2>Top Movies</h2>
+    <div class="movies-grid" id="movies-list">
+
+    </div>
+  </section>
+
+
+  <div id="movie-popup" class="hidden">
+    <div class="movie-details">
+      <img id="popup-img" src="" alt=""/>
+      <div>
+        <h3 id="popup-title"></h3>
+        <p><strong>Έτος:</strong> <span id="popup-year"></span></p>
+        <p><strong>Περιγραφή:</strong> <span id="popup-description"></span></p>
+        <button id="close-popup-btn">Κλείσιμο</button>
+      </div>
+    </div>
+  </div>
+
+
+  <section id="favourites-section" class="hidden">
+    <h2>Αγαπημένα</h2>
+    <div class="movies-grid" id="favourites-list">
+
+    </div>
+  </section>
+
+
+  <section id="settings-section" class="hidden">
+    <div class="settings-container">
+      <h2>Προφίλ Χρήστη</h2>
+
+      <div class="setting-item">
+        🌗 Dark Mode / Light Mode
+        <button id="theme-toggle">Αλλαγή Θέματος</button>
+      </div>
+
+      <div class="setting-item">
+        🌐 Language / Γλώσσα
+        <button>Επιλογή Γλώσσας</button>
+      </div>
+
+      <div class="setting-item">
+        🔒 Privacy Policy
+      </div>
+
+      <div class="setting-item">
+        📄 Terms of Use
+      </div>
+
+
+    </div>
+  </section>
+
+</main>
+
+
+<nav id="bottom-nav">
+  <button onclick="showSection('home')">🏠 Αρχική</button>
+  <button onclick="showSection('search')">🔍 Αναζήτηση</button>
+  <button onclick="showSection('favourites')">⭐ Αγαπημένα</button>
+  <button onclick="showSection('settings')">⚙️ Ρυθμίσεις</button>
+</nav>
+
+<script src="script.js"></script>
+</body>
+</html>

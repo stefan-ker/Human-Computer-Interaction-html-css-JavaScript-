@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Details</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<header>
+  <div class="logo">
+    <img src="logo.png" alt="Logo" class="logo-img">
+    <h1>MOVIES.GR</h1>
+ 
+</header>
+
+
+<section id="movie-details-section">
+  <div class="movie-details">
+    <img id="movie-detail-img" src="" alt="">
+    <div>
+      <h3 id="movie-detail-title"></h3>
+      <p><strong>Έτος:</strong> <span id="movie-detail-year"></span></p>
+      <p><strong>Περιγραφή:</strong> <span id="movie-detail-description"></span></p>
+    </div>
+  </div>
+  <button onclick="goBack()">⬅ Πίσω</button>
+</section>
+
+<script>
+  // Παίρνουμε τις παραμέτρους από το URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const title = urlParams.get('title');
+  const image = urlParams.get('image');
+  const year = urlParams.get('year');
+  const description = urlParams.get('description');
+
+  // Αντιστοιχούμε τις τιμές στα στοιχεία της σελίδας
+  document.getElementById('movie-detail-title').textContent = title;
+  document.getElementById('movie-detail-img').src = image;
+  document.getElementById('movie-detail-year').textContent = year;
+  document.getElementById('movie-detail-description').textContent = description;
+
+  // Συναρτηση για επιστροφή στην αρχική σελίδα
+  function goBack() {
+    window.history.back();
+  }
+</script>
+
+</body>
+</html>
